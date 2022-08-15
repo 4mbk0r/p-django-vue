@@ -37,7 +37,7 @@ from django.views.generic import TemplateView
 urlpatterns = [
 
     path('admin/', admin.site.urls),
-    path('api/v1.0/', include('book.urls')),
+    path('api/v1.0/', include('book.urls')),        
     url('', TemplateView.as_view(template_name='index.html')),
 ]
     
