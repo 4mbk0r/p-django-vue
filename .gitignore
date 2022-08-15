@@ -1,7 +1,6 @@
 .DS_Store
 vue_app
 
-staticfiles
 node_modules/
 /dist/
 npm-debug.log*
