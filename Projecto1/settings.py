@@ -145,7 +145,7 @@ SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
 CSRF_COOKIE_HTTPONLY = True
 
-DEBUG = True
+DEBUG = False
 
 SITE_ID = 1
 # Static files (CSS, JavaScript, Images)
