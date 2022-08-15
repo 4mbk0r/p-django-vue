@@ -60,8 +60,6 @@ INSTALLED_APPS = [
     'book',
     'rest_framework',
     'corsheaders',
-    
-
 ]
 
 MIDDLEWARE = [

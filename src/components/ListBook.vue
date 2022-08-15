@@ -33,7 +33,7 @@ export default {
     },
     methods: {
         getBooks() {
-            const path = process.env.API_URL + '/api/v1.0/books'
+            const path = process.env.API_URL + "/api/v1.0/books/"
             axios.get(path).then((response) => {
                 this.books = response.data
             })
