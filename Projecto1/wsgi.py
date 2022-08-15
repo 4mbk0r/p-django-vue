@@ -7,12 +7,19 @@ For more information on this file, see
 https://docs.djangoproject.com/en/3.2/howto/deployment/wsgi/
 """
 
-import os
+"""import os
 
 from django.core.wsgi import get_wsgi_application
 
 
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Projecto1.settings')
+
+application = get_wsgi_application()
+"""
+import os
+from django.core.wsgi import get_wsgi_application
+
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "django_vue_template.settings")
 
 application = get_wsgi_application()

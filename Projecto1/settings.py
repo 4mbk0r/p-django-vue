@@ -33,8 +33,10 @@ SECRET_KEY = 'django-insecure-u!+5zh0i@8d&2(**4)6l)mk&^kh!ewg%)^)0is7gff&^3#@@hk
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+###ALLOWED_HOSTS = []
+DEBUG = False 
+#SECRET_KEY = os.environ['SECRET_KEY'] 
+ALLOWED_HOSTS = ['pagina-web-prueba.herokuapp.com', 'localhost']
 
 STATS_FILE = os.path.join(BASE_DIR, 'webpack-stats.json')
 
@@ -74,7 +76,8 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'corsheaders.middleware.CorsMiddleware',
-    'django.middleware.common.CommonMiddleware', 
+    'django.middleware.common.CommonMiddleware',
+    "django.middleware.security.SecurityMiddleware",
 ]
 
 
@@ -147,7 +150,7 @@ SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
 CSRF_COOKIE_HTTPONLY = True
 
-DEBUG = True
+
 
 SITE_ID = 1
 # Static files (CSS, JavaScript, Images)
@@ -174,8 +177,7 @@ DATABASES['default'].update(db_from_env)
 ###STATICFILES_DIRS = (
 ###    os.path.join(BASE_DIR, 'static'),
 ###)
-
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
-
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') 
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 django_heroku.settings(locals())
