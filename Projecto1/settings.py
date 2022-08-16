@@ -32,10 +32,10 @@ SECRET_KEY = 'django-insecure-u!+5zh0i@8d&2(**4)6l)mk&^kh!ewg%)^)0is7gff&^3#@@hk
 
 # SECURITY WARNING: don't run with debug turned on in production!
 #######DEBUG = True
-DEBUG = False
+DEBUG = True
 
 ######SECRET_KEY = os.environ['SECRET_KEY']
-ALLOWED_HOSTS = ['con-prueba.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['prueba-django-vue.herokuapp.com']
 
 
 #ALLOWED_HOSTS = []
@@ -50,6 +50,8 @@ CORS_ORIGIN_WHITELIST = [
     'http://127.0.0.1:8080',
 ]
 CORS_ORIGIN_ALLOW_ALL = True
+
+
 STATICFILES_DIRS = [ 
   os.path.join(BASE_DIR, 'dist/static'), 
 ]
@@ -77,6 +79,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
+    'django.middleware.security.SecurityMiddleware',
     'corsheaders.middleware.CorsMiddleware',
 ]
 
@@ -177,9 +180,9 @@ DATABASES['default'].update(db_from_env)
 ###STATICFILES_DIRS = (
 ###    os.path.join(BASE_DIR, 'static'),
 ###)
+STATIC_ROOT = os.path.join(BASE_DIR, 'dist', 'static')
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 django_heroku.settings(locals())
