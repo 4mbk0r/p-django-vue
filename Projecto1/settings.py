@@ -34,7 +34,7 @@ SECRET_KEY = 'django-insecure-u!+5zh0i@8d&2(**4)6l)mk&^kh!ewg%)^)0is7gff&^3#@@hk
 DEBUG = True
 
 #ALLOWED_HOSTS = []
-ALLOWED_HOSTS = ['pagina-web-prueba.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['con-prueba.herokuapp.com', 'localhost']
 
 STATS_FILE = os.path.join(BASE_DIR, 'webpack-stats.json')
 
