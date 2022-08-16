@@ -16,10 +16,7 @@ import django_heroku
 from pathlib import Path
 import os
 
-try:
-    from local_settings import *
-except ImportError:
-    pass
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -35,7 +32,7 @@ SECRET_KEY = 'django-insecure-u!+5zh0i@8d&2(**4)6l)mk&^kh!ewg%)^)0is7gff&^3#@@hk
 DEBUG = True
 
 ######SECRET_KEY = os.environ['SECRET_KEY']
-ALLOWED_HOSTS = ['prueba-django-vue.herokuapp.com']
+ALLOWED_HOSTS = ['con-prueba.herokuapp.com']
 
 
 #ALLOWED_HOSTS = []
@@ -50,8 +47,6 @@ CORS_ORIGIN_WHITELIST = [
     'http://127.0.0.1:8080',
 ]
 CORS_ORIGIN_ALLOW_ALL = True
-
-
 STATICFILES_DIRS = [ 
   os.path.join(BASE_DIR, 'dist/static'), 
 ]
@@ -79,7 +74,6 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
-    'django.middleware.security.SecurityMiddleware',
     'corsheaders.middleware.CorsMiddleware',
 ]
 
@@ -177,12 +171,12 @@ DATABASES['default'].update(db_from_env)
 
 ###STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 ###STATIC_URL = '/static/'  # Extra places for collectstatic to find static files.
-###STATICFILES_DIRS = (f
+###STATICFILES_DIRS = (
 ###    os.path.join(BASE_DIR, 'static'),
 ###)
-STATIC_ROOT = os.path.join(BASE_DIR, 'dist', 'static')
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 
 django_heroku.settings(locals())

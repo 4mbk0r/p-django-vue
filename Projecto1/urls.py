@@ -38,7 +38,7 @@ urlpatterns = [
 
     path('admin/', admin.site.urls),
     path('api/v1.0/', include('book.urls')),        
-    url('', index, name=''),
+    url('', TemplateView.as_view(template_name='index.html')),
 ]
     
    
