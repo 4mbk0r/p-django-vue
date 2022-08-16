@@ -36,7 +36,7 @@ DEBUG = True
 #ALLOWED_HOSTS = []
 ALLOWED_HOSTS = ['con-prueba.herokuapp.com', 'localhost']
 
-STATS_FILE = os.path.join(BASE_DIR, 'webpack-stats.json')
+STATS_FILE = os.path.join(BASE_DIR, 'build/webpack-stats.json')
 
 # Application definition
 
