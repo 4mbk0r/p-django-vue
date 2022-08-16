@@ -28,15 +28,19 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-u!+5zh0i@8d&2(**4)6l)mk&^kh!ewg%)^)0is7gff&^3#@@hk'
+#####SECRET_KEY = 'django-insecure-u!+5zh0i@8d&2(**4)6l)mk&^kh!ewg%)^)0is7gff&^3#@@hk'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-#ALLOWED_HOSTS = []
+#######DEBUG = True
+DEBUG = False
+SECRET_KEY = os.environ['SECRET_KEY']
 ALLOWED_HOSTS = ['con-prueba.herokuapp.com', 'localhost']
 
-STATS_FILE = os.path.join(BASE_DIR, 'build/webpack-stats.json')
+
+#ALLOWED_HOSTS = []
+########ALLOWED_HOSTS = ['con-prueba.herokuapp.com', 'localhost']
+
+STATS_FILE = os.path.join(BASE_DIR, 'webpack-stats.json')
 
 # Application definition
 
@@ -145,7 +149,7 @@ SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
 CSRF_COOKIE_HTTPONLY = True
 
-DEBUG = False
+#########DEBUG = False
 
 SITE_ID = 1
 # Static files (CSS, JavaScript, Images)
