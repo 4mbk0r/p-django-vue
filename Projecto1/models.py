@@ -7,3 +7,4 @@ class Model_Login(models.Model):
 class Index(models.Model):
     titulo = models.CharField(max_length=100)
     nombre = models.TextField(max_length=200)
+    casa = models.DateField()

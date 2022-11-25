@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/components/HelloWorld.vue</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="..\..\prettify.css" />
+    <link rel="stylesheet" href="..\..\base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(..\..\sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="..\..\index.html">All files</a> / <a href="index.html">src/components</a> HelloWorld.vue
+    </h1>
+    <div class='clearfix'>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">&lt;template&gt;
+&nbsp;
+  &lt;v-container fluid&gt;
+    &lt;v-tabs v-model="tab" show-arrows background-color="deep-purple accent-4" icons-and-text dark grow&gt;
+      &lt;v-tabs-slider color="purple darken-4"&gt;&lt;/v-tabs-slider&gt;
+      &lt;v-tab v-for="(tab, i) in tabs" :key="i"&gt;
+        &lt;v-icon large&gt;{{ tab.icon }}&lt;/v-icon&gt;
+        &lt;div class="caption py-1"&gt;{{ tab.name }}&lt;/div&gt;
+      &lt;/v-tab&gt;
+      &lt;v-tab-item&gt;
+        &lt;v-card class="px-4"&gt;
+          &lt;v-card-text&gt;
+            &lt;v-form ref="loginForm" v-model="valid" lazy-validation @action="validate"&gt;
+              &lt;v-row&gt;
+                &lt;v-col cols="12"&gt;
+                  &lt;v-text-field v-model="user.nick" :rules="loginEmailRules" label="Nombre de Usuario" required&gt;
+                  &lt;/v-text-field&gt;
+                &lt;/v-col&gt;
+                &lt;v-col cols="12"&gt;
+                  &lt;v-text-field v-model="user.password" :append-icon="show1 ? 'eye' : 'eye-off'"
+                    :rules="[rules.required, rules.min]" :type="show1 ? 'text' : 'password'" name="input-10-1"
+                    label="Constaseña" hint="Minimo 8 caracteres" counter @click:append="show1 = !show1"&gt;
+                  &lt;/v-text-field&gt;
+                &lt;/v-col&gt;
+                &lt;v-col class="d-flex" cols="12" sm="6" xsm="12"&gt;
+                &lt;/v-col&gt;
+                &lt;v-spacer&gt;&lt;/v-spacer&gt;
+                &lt;v-col class="d-flex" cols="12" sm="3" xsm="12" align-end&gt;
+                  &lt;v-btn x-large block :disabled="!valid" color="success" @click="validate"&gt; Iniciar Sesion &lt;/v-btn&gt;
+                &lt;/v-col&gt;
+              &lt;/v-row&gt;
+            &lt;/v-form&gt;
+          &lt;/v-card-text&gt;
+        &lt;/v-card&gt;
+      &lt;/v-tab-item&gt;
+      &lt;v-tab-item&gt;
+        &lt;v-card class="px-4"&gt;
+          &lt;v-card-text&gt;
+            &lt;v-form ref="registerForm" v-model="valid" lazy-validation&gt;
+              &lt;v-row&gt;
+                &lt;v-col cols="12"&gt;
+                  &lt;v-text-field v-model="user.nick" :rules="[rules.required]" label="Nick" maxlength="20" required&gt;
+                  &lt;/v-text-field&gt;
+                &lt;/v-col&gt;
+&nbsp;
+                &lt;v-col cols="12"&gt;
+                  &lt;v-text-field v-model="user.nombre" :rules="[rules.required]" label="Nombre Completo" maxlength="20"
+                    required&gt;&lt;/v-text-field&gt;
+                &lt;/v-col&gt;
+                &lt;v-col cols="12"&gt;
+                  &lt;v-text-field v-model="user.fecha" type="date" :rules="[rules.required]" label="Fecha de Nacimeinto"
+                    maxlength="20" required&gt;&lt;/v-text-field&gt;
+                &lt;/v-col&gt;
+                &lt;v-col cols="12"&gt;
+                  &lt;v-text-field v-model="user.correo" :rules="emailRules" label="E-mail" required&gt;&lt;/v-text-field&gt;
+                &lt;/v-col&gt;
+                &lt;v-col cols="12"&gt;
+                  &lt;v-text-field v-model="user.password" :append-icon="show1 ? 'mdi-eye' : 'mdi-eye-off'"
+                    :rules="[rules.required, rules.min]" :type="show1 ? 'text' : 'password'" name="input-10-1"
+                    label="Password" hint="At least 8 characters" counter @click:append="show1 = !show1"&gt;
+                  &lt;/v-text-field&gt;
+                &lt;/v-col&gt;
+                &lt;v-col cols="12"&gt;
+                  &lt;v-text-field block v-model="verify" :append-icon="show1 ? 'mdi-eye' : 'mdi-eye-off'"
+                    :rules="[rules.required, passwordMatch]" :type="show1 ? 'text' : 'password'" name="input-10-1"
+                    label="Confirm Password" counter @click:append="show1 = !show1"&gt;&lt;/v-text-field&gt;
+                &lt;/v-col&gt;
+                &lt;v-spacer&gt;&lt;/v-spacer&gt;
+                &lt;v-col class="d-flex ml-auto" cols="12" sm="3" xsm="12"&gt;
+                  &lt;v-btn x-large block :disabled="!valid" color="success" type="sumbit"&gt;Registro&lt;/v-btn&gt;
+                &lt;/v-col&gt;
+              &lt;/v-row&gt;
+            &lt;/v-form&gt;
+          &lt;/v-card-text&gt;
+        &lt;/v-card&gt;
+      &lt;/v-tab-item&gt;
+    &lt;/v-tabs&gt;
+  &lt;/v-container&gt;
+&lt;/template&gt;
+&nbsp;
+&lt;script&gt;
+<span class="cstat-no" title="statement not covered" >import axios from 'axios';</span>
+<span class="cstat-no" title="statement not covered" >import App from '../App.vue';</span>
+export default {
+  name: 'HelloWorld',
+  components: {
+    App,
+  },
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >  data: () =&gt; ({</span></span>
+    dialog: true,
+    tab: 0,
+    tabs: [
+      { name: "Inicio de Sesion", icon: "mdi-account" },
+      { name: "Registro", icon: "mdi-account-outline" }
+    ],
+    valid: true,
+    user: {},
+<span class="fstat-no" title="function not covered" >    loginEmailRules: [</span>
+<span class="cstat-no" title="statement not covered" >      v =&gt; !!v || "Se requiere completar",</span>
+    ],
+<span class="fstat-no" title="function not covered" >    emailRules: [</span>
+<span class="cstat-no" title="statement not covered" >      v =&gt; !!v || "Se requiere completar",</span>
+    ],
+&nbsp;
+    show1: false,
+    rules: {
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >      required: value =&gt; !!value || "Se requiere completar",</span></span>
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >      min: v =&gt; (v &amp;&amp; v.length &gt;= 4) || "Minimo 4 Caracteres"</span></span>
+    },
+    passwordMatch: false,
+    verify: false,
+  }),
+  methods: {
+<span class="fstat-no" title="function not covered" >    validate() {</span>
+<span class="cstat-no" title="statement not covered" >      const path = process.env.API_URL + "/login"</span>
+&nbsp;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      let headers = {</span>
+&nbsp;
+      };
+<span class="cstat-no" title="statement not covered" >      let data = this.user;</span>
+<span class="cstat-no" title="statement not covered" >      axios.defaults.xsrfHeaderName = "X-CSRFTOKEN";</span>
+<span class="cstat-no" title="statement not covered" >      axios.defaults.xsrfCookieName = "csrftoken";</span>
+<span class="cstat-no" title="statement not covered" >      axios.defaults.withCredentials = true;</span>
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >      axios.post(path, data, { headers }).then((response) =&gt; {</span></span>
+<span class="cstat-no" title="statement not covered" >        console.log(response.data)</span>
+<span class="fstat-no" title="function not covered" >      })</span>
+        .catch((error) =&gt; {
+<span class="cstat-no" title="statement not covered" >          console.log(error);</span>
+        })
+    },
+<span class="fstat-no" title="function not covered" >    getCookie(name) {</span>
+<span class="cstat-no" title="statement not covered" >      let cookieValue = null;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      if (document.cookie &amp;&amp; document.cookie !== '') {</span>
+<span class="cstat-no" title="statement not covered" >        const cookies = document.cookie.split(';');</span>
+<span class="cstat-no" title="statement not covered" >        for (let i = 0; i &lt; cookies.length; i++) {</span>
+<span class="cstat-no" title="statement not covered" >          const cookie = cookies[i].trim();</span>
+&nbsp;
+          // Does this cookie string begin with the name we want?
+<span class="cstat-no" title="statement not covered" >          if (cookie.substring(0, name.length + 1) === (name + '=')) {</span>
+<span class="cstat-no" title="statement not covered" >            cookieValue = decodeURIComponent(cookie.substring(name.length + 1));</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            break;</span>
+          }
+        }
+      }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      return cookieValue;</span>
+    }
+  }
+}
+&lt;/script&gt;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Aug 29 2022 13:27:03 GMT-0400 (hora de Bolivia)
+</div>
+</div>
+<script src="..\..\prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="..\..\sorter.js"></script>
+</body>
+</html>

@@ -26,19 +26,37 @@ Including another URLconf
     path('api/v1.0/', include('book.urls')) """
 
 
+from apps.users.views import Login, Logout
+from apps.quizz.views import Pregunta
 from xml.etree.ElementInclude import include
-from Projecto1.views import bienvenido, login_inicio, registar,  cerrar_login, index, chatbot, quiz, test_new
+from Projecto1.views import bienvenido, login_inicio, registar,  cerrar_login, index, chatbot, quiz, test_new, suma
 from django.contrib import admin
 from django.contrib.auth import login, logout
 from django.urls import path, include
 from django.conf.urls import url
-#from vue_app import views as vue_views  # This line is new
+# from vue_app import views as vue_views  # This line is new
 from django.views.generic import TemplateView
-urlpatterns = [
+from rest_framework_simplejwt.views import (
+    TokenObtainPairView,
+    TokenRefreshView,
 
+)
+from rest_framework_swagger.views import get_swagger_view
+
+schema_view = get_swagger_view(title='Pastebin API')
+
+urlpatterns = [
+    path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+    path('pregunta/', Pregunta.as_view(), name="pregunta"),
+    url('porapi/', schema_view),
     path('admin/', admin.site.urls),
-    path('api/v1.0/', include('book.urls')),        
+    path('api/v1.0/', include('apps.book.urls')),
+    path('users/', include('apps.users.api.routers')),
+    path('login/', Login.as_view(), name="Login"),
+    path('logout/', Logout.as_view(), name="Logout"),
+    path('add/', suma),
     url('', TemplateView.as_view(template_name='index.html')),
+
+
 ]
-    
-   

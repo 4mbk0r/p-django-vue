@@ -129,3 +129,7 @@ def quiz(request):
 def test_new(request):
     context = {}
     return render(request, 'nuevo_test.html', context)
+
+def suma(request):
+    context = {}
+    return request

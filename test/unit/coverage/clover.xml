@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1661794023116" clover="3.2.0">
+  <project timestamp="1661794023116" name="All files">
+    <metrics statements="43" coveredstatements="0" conditionals="15" coveredconditionals="0" methods="21" coveredmethods="0" elements="79" coveredelements="0" complexity="0" loc="43" ncloc="43" packages="4" files="7" classes="7">
+      <package name="src">
+        <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <file name="App.vue" path="C:\Users\home\Documents\proyectos\django-vue\Projecto1\src\App.vue">
+          <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+          <line num="23" count="0" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.components">
+        <metrics statements="39" coveredstatements="0" conditionals="15" coveredconditionals="0" methods="20" coveredmethods="0"/>
+        <file name="HelloWorld.vue" path="C:\Users\home\Documents\proyectos\django-vue\Projecto1\src\components\HelloWorld.vue">
+          <metrics statements="25" coveredstatements="0" conditionals="15" coveredconditionals="0" methods="9" coveredmethods="0"/>
+          <line num="82" count="0" type="stmt"/>
+          <line num="83" count="0" type="stmt"/>
+          <line num="89" count="0" type="stmt"/>
+          <line num="99" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="102" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="107" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="108" count="0" type="cond" truecount="0" falsecount="3"/>
+          <line num="115" count="0" type="stmt"/>
+          <line num="118" count="0" type="stmt"/>
+          <line num="121" count="0" type="stmt"/>
+          <line num="122" count="0" type="stmt"/>
+          <line num="123" count="0" type="stmt"/>
+          <line num="124" count="0" type="stmt"/>
+          <line num="125" count="0" type="stmt"/>
+          <line num="126" count="0" type="stmt"/>
+          <line num="129" count="0" type="stmt"/>
+          <line num="133" count="0" type="stmt"/>
+          <line num="135" count="0" type="cond" truecount="0" falsecount="4"/>
+          <line num="136" count="0" type="stmt"/>
+          <line num="137" count="0" type="stmt"/>
+          <line num="138" count="0" type="stmt"/>
+          <line num="141" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="142" count="0" type="stmt"/>
+          <line num="144" count="0" type="stmt"/>
+          <line num="149" count="0" type="stmt"/>
+        </file>
+        <file name="ListBook.vue" path="C:\Users\home\Documents\proyectos\django-vue\Projecto1\src\components\ListBook.vue">
+          <metrics statements="12" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="0"/>
+          <line num="22" count="0" type="stmt"/>
+          <line num="25" count="0" type="stmt"/>
+          <line num="36" count="0" type="stmt"/>
+          <line num="37" count="0" type="stmt"/>
+          <line num="38" count="0" type="stmt"/>
+          <line num="39" count="0" type="stmt"/>
+          <line num="42" count="0" type="stmt"/>
+          <line num="46" count="0" type="stmt"/>
+          <line num="49" count="0" type="stmt"/>
+          <line num="50" count="0" type="stmt"/>
+          <line num="54" count="0" type="stmt"/>
+          <line num="59" count="0" type="stmt"/>
+        </file>
+        <file name="Login.vue" path="C:\Users\home\Documents\proyectos\django-vue\Projecto1\src\components\Login.vue">
+          <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+          <line num="15" count="0" type="stmt"/>
+        </file>
+        <file name="Main.vue" path="C:\Users\home\Documents\proyectos\django-vue\Projecto1\src\components\Main.vue">
+          <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+          <line num="27" count="0" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.plugins">
+        <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="vuetify.js" path="C:\Users\home\Documents\proyectos\django-vue\Projecto1\src\plugins\vuetify.js">
+          <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="0" type="stmt"/>
+          <line num="2" count="0" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.views">
+        <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="HomeView.vue" path="C:\Users\home\Documents\proyectos\django-vue\Projecto1\src\views\HomeView.vue">
+          <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="6" count="0" type="stmt"/>
+        </file>
+      </package>
+    </metrics>
+  </project>
+</coverage>

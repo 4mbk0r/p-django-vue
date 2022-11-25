@@ -3,12 +3,14 @@
         <div class="row">
             <div class="col text-left">
                 <h2> Listado Libros 2</h2>
+                <b-button size="sm" variant="primary" @click="close()">Close</b-button>
+                <b-button size="sm" variant="primary" @click="adicionar()">Add</b-button>
                 <div class="col-md-12">
                     <b-table striped hover :items="books" :fields="fields">
-                       
+
                         <template v-slot:cell(action)=data>
-                            <b-button size="sm" variant="primary" @click="editar(data)" >Editar</b-button>
-                            <b-button size="sm" variant="danger" @click="editar(data)" >Eliminar</b-button>
+                            <b-button size="sm" variant="primary" @click="editar(data)">Editar</b-button>
+                            <b-button size="sm" variant="danger" @click="editar(data)">Eliminar</b-button>
                         </template>
                     </b-table>
                 </div>
@@ -19,6 +21,8 @@
 
 <script>
 import axios from 'axios'
+
+const Cookies = require('js-cookie');
 export default {
     data() {
         return {
@@ -41,9 +45,54 @@ export default {
                     console.log(error);
                 })
         },
-        editar(data){
+        editar(data) {
             console.log(data)
         },
+        adicionar() {
+            const path = process.env.API_URL + "/adicionar/"
+            axios.post(path, {
+                name: 'name',
+                date: 'date'
+            }).then((response) => {
+                console.log(response.data);
+            })
+        },
+        close() {
+            const path = process.env.API_URL + "/logout/"
+            console.log(path)
+            //this.user.token=null
+            console.log(JSON.parse(localStorage.getItem('user')))
+            var datos = {
+                token: localStorage.getItem('token'),
+                name: JSON.parse(localStorage.getItem('user')).username,
+                nuevo: '',
+            }
+            axios({
+                method: "post",
+                url: path,
+                data: datos,
+                headers: {
+                    'Content-Type': 'application/json',
+                    "X-CSRFToken": Cookies.get('csrftoken')
+                },
+
+            }).then((response) => {
+                console.log(response.data)
+                if (response.status == 200) {
+                    console.log(response)
+                    localStorage.clear()
+                    localStorage.removeItem('token-user')
+                    localStorage.removeItem('data-user')
+                    alert('se cerrado session')
+
+                    this.$router.push('/')
+
+                }
+            })
+                .catch((error) => {
+                    console.log(error);
+                })
+        }
     },
     created() {
         this.getBooks()
