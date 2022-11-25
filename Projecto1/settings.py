@@ -43,19 +43,12 @@ STATS_FILE = os.path.join(BASE_DIR, 'webpack-stats.json')
 # Application definition
 
 
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:8080",
-    "http://127.0.0.1:8080",
-    "http://localhost:8000",
-    "http://127.0.0.1:8000",
+INSTALLED_APPS = [
+    'corsheaders',
 ]
-CSRF_TRUSTED_ORIGINS = [
-    "http://localhost:8080",
-    "http://127.0.0.1:8080",
-    "http://localhost:8000",
-    "http://127.0.0.1:8000",
+MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
 ]
-
 CORS_ORIGIN_ALLOW_ALL = True
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'dist/static'),
