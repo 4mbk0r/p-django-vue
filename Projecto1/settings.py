@@ -15,6 +15,7 @@ import dj_database_url
 import django_heroku
 from pathlib import Path
 import os
+from .base import *
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -32,7 +33,7 @@ SECRET_KEY = 'django-insecure-u!+5zh0i@8d&2(**4)6l)mk&^kh!ewg%)^)0is7gff&^3#@@hk
 DEBUG = True
 
 # SECRET_KEY = os.environ['SECRET_KEY']
-ALLOWED_HOSTS = ['con-prueba.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['prueba-django-vue.herokuapp.com', 'localhost']
 
 
 # ALLOWED_HOSTS = []
