@@ -22,7 +22,7 @@
       <v-divider></v-divider>
 
       <v-list nav dense>
-        <v-list-item link>
+        <v-list-item @click="logout" link>
           <v-list-item-icon>
             <v-icon>mdi-folder</v-icon>
           </v-list-item-icon>
@@ -74,6 +74,7 @@ export default {
       localStorage.removeItem('user');
       localStorage.removeItem('token');
       localStorage.removeItem('refresh-token')
+      this.$router.push('/')
 
     }
   }
