@@ -33,7 +33,7 @@ SECRET_KEY = 'django-insecure-u!+5zh0i@8d&2(**4)6l)mk&^kh!ewg%)^)0is7gff&^3#@@hk
 DEBUG = True
 
 # SECRET_KEY = os.environ['SECRET_KEY']
-ALLOWED_HOSTS = ['con-prueba.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['dj-vue-base.herokuapp.com', 'localhost']
 
 
 # ALLOWED_HOSTS = []
@@ -45,13 +45,13 @@ STATS_FILE = os.path.join(BASE_DIR, 'webpack-stats.json')
 
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:8000",
+    "http://localhost:8080",
 ]
 CSRF_TRUSTED_ORIGINS = [
-    "http://localhost:8000",
+    "http://localhost:8080",
 ]
 
-CORS_ORIGIN_ALLOW_ALL = True
+CORS_ORIGIN_ALLOW_ALL = False
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'dist/static'),
 ]
@@ -219,8 +219,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'  # Extra places for collectstatic to find static files.
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'), )
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 REST_FRAMEWORK = {
     'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema',
