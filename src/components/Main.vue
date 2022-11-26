@@ -2,6 +2,7 @@
     <v-app id="inspire">
         <v-navigation-drawer v-model="drawer" app>
             <!--  -->
+            <h1>Logout</h1>
         </v-navigation-drawer>
 
         <v-app-bar app>
@@ -25,6 +26,6 @@
 <script>
 export default {
     data: () => ({ drawer: null }),
-    
+
 }
 </script>

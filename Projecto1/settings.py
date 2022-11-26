@@ -15,10 +15,9 @@ import dj_database_url
 import django_heroku
 from pathlib import Path
 import os
-from .base import *
 
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
+# Build paths inside the project like this: BASE_DIR / 'ssubdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
@@ -46,12 +45,14 @@ STATS_FILE = os.path.join(BASE_DIR, 'webpack-stats.json')
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:8080",
+    "http://localhost:8000",
 ]
 CSRF_TRUSTED_ORIGINS = [
     "http://localhost:8080",
+    "http://localhost:8000",
 ]
 
-CORS_ORIGIN_ALLOW_ALL = False
+CORS_ORIGIN_ALLOW_ALL = True
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'dist/static'),
 ]
@@ -214,10 +215,6 @@ db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
 
 DATABASE_ROUTERS = ['apps.quiz.routers.MiApp2Router', ]
-
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATIC_URL = '/static/'  # Extra places for collectstatic to find static files.
-STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'), )
 
 
 REST_FRAMEWORK = {

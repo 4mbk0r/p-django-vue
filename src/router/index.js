@@ -6,6 +6,7 @@ import ListBook from '@/components/ListBook'
 
 import Main from '@/components/HelloWorld'
 import Login from '@/components/Login'
+import Chatbot from '@/components/Chatbot'
 Vue.use(Router)
 
 export default new Router({
@@ -29,6 +30,11 @@ export default new Router({
       path: '/login',
       name: 'Login',
       component: Login
+    },
+    {
+      path: '/chatbot',
+      name: 'Chatbot',
+      component: Chatbot
     },
   ],
   mode: 'history',
