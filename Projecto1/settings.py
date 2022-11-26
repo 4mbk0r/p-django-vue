@@ -33,7 +33,7 @@ SECRET_KEY = 'django-insecure-u!+5zh0i@8d&2(**4)6l)mk&^kh!ewg%)^)0is7gff&^3#@@hk
 DEBUG = True
 
 # SECRET_KEY = os.environ['SECRET_KEY']
-ALLOWED_HOSTS = ['prueba-django-vue.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['con-prueba.herokuapp.com', 'localhost']
 
 
 # ALLOWED_HOSTS = []
@@ -215,11 +215,9 @@ DATABASES['default'].update(db_from_env)
 
 DATABASE_ROUTERS = ['apps.quiz.routers.MiApp2Router', ]
 
-# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-# STATIC_URL = '/static/'  # Extra places for collectstatic to find static files.
-# STATICFILES_DIRS = (
-# os.path.join(BASE_DIR, 'static'),
-# )
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_URL = '/static/'  # Extra places for collectstatic to find static files.
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'), )
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
