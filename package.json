@@ -11,7 +11,8 @@
     "start": "npm run dev",
     "test": "npm run unit",
     "unit": "jest --config test/unit/jest.conf.js --coverage",
-    "watch": "webpack-dev-server --config build/webpack.dev.conf.js --watch"
+    "watch": "webpack-dev-server --config build/webpack.dev.conf.js --watch",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "dependencies": {
     "axios": "^0.27.2",
