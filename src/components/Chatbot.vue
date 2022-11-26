@@ -196,6 +196,7 @@ export default {
             })
         },
         addfirst() {
+            if (this.preguntas.length <= this.nro) return
             this.messages.push(this.preguntas[this.nro])
             this.nro += 1
             //document.getElementById("chat-" + this.messages.length - 1).scrollIntoView()
