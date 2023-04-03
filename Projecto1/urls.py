@@ -27,7 +27,7 @@ Including another URLconf
 
 
 from apps.users.views import Login, Logout
-from apps.quizz.views import Pregunta
+from apps.quizz.views import Pregunta, chatGPT
 from xml.etree.ElementInclude import include
 from Projecto1.views import bienvenido, login_inicio, registar,  cerrar_login, index, chatbot, quiz, test_new, suma
 from django.contrib import admin
@@ -55,7 +55,8 @@ urlpatterns = [
     path('users/', include('apps.users.api.routers')),
     path('login/', Login.as_view(), name="Login"),
     path('logout/', Logout.as_view(), name="Logout"),
-    path('add/', suma),
+    path('add/', suma, name="adicionar"),
+    url('respuesta/',  chatGPT.as_view(), name="respuesta   "),
     url('', TemplateView.as_view(template_name='index.html')),
 
 

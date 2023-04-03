@@ -185,6 +185,9 @@ export default {
     }),
     methods: {
         send: function () {
+
+            
+
             this.messages.push(structuredClone(this.messageForm))
             this.addfirst()
 

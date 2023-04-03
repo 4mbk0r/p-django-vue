@@ -10,3 +10,4 @@ class PreguntarSerializer(serializers.ModelSerializer):
     class Meta:
         model = PreguntaModel
         fields = '__all__'
+
