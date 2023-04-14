@@ -3,7 +3,7 @@ import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 
 import ListBook from '@/components/ListBook'
-
+import Adminstrar from '@/components/Administrar'
 import Main from '@/components/HelloWorld'
 import Login from '@/components/Login'
 import Chatbot from '@/components/Chatbot'
@@ -20,6 +20,11 @@ export default new Router({
       path: '/books',
       name: 'ListBook',
       component: ListBook
+    },
+    {
+      path: '/administrar',
+      name: 'Administrar',
+      component: Adminstrar
     },
     {
       path: '/inicio',
